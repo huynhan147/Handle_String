@@ -1,0 +1,18 @@
+{
+    "name": "huyit/handle_string",
+    "description": "Handle String",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "huynhan147",
+            "email": "huyitptit2015@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+        "psr-4" :{
+            "Handle_String\\": "src/"
+        }
+
+    }
+}
