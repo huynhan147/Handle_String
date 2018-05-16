@@ -1,11 +1,10 @@
 # Thư viện hỗ trợ hiển vị trí chuỗi con trong chuỗi cha.
-#Cài đặt : 
-Dùng lệnh : 
+## Cài đặt
 ```
 composer require huyit/handle_string
 
 ```
-#Sử dụng:
+## Sử dụng
 - include file `autoload.php`;
 ```
     use Handle_String\Handle_String;
@@ -22,4 +21,3 @@ $handle = new Handle_String($arr,$String,$len);
 $data= $handle->ShowString();
 trả về chuỗi trong đó đã xác định rõ từng vị trí của chuỗi con
 ```
-
