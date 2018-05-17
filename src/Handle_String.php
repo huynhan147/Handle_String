@@ -13,7 +13,11 @@ class Handle_String{
 			$arr2[$j]= $String[$j];
 			}
 		for($i= 0; $i< $lenArr;$i++){
-			$color = '#'.$this->random_color();
+			if($i%2==0){
+				$color = '#'.$this->doNewColor();
+			}else{
+				$color = '#'.$this->doNewColorhot();
+			}
 			for($j=0;$j<count($arr2);$j++){
 				if($j==$arr[$i]){
 					$arr2[$j]= htmlentities("<span style ='color: $color'>[</span>").$arr2[$j];
@@ -26,11 +30,13 @@ class Handle_String{
 	$this->output = (html_entity_decode(implode($arr2)));
 
 	}
-	public function random_color_part() {
-    return str_pad( dechex( mt_rand( 0, 255 ) ), 2, '0', STR_PAD_LEFT);
+	function doNewColor(){
+	$color = dechex(rand(0xFFFF00, 0xFF1493));
+	return $color;
 	}
-	public function random_color(){
-    return $this->random_color_part() . $this->random_color_part() . $this->random_color_part();
+	function doNewColorhot(){
+	$color = dechex(rand(0x8470FF, 0x006400));
+	return $color;
 	}
 	public function ShowString(){
 		return $this->output;
